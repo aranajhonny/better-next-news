@@ -18,7 +18,7 @@ export default () => (
 
 const Item = ({ href, children }) => (
   <li>
-    <Link prefetch href={href}>
+    <Link href={href}>
       <a>{ children }</a>
     </Link>
 

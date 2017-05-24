@@ -9,7 +9,7 @@ export default ({ id, title, date, url, user, score, commentsCount }) => {
       {
         url
           ? <a href={url}>{title}</a>
-          : <Link prefetch href={`/item?id=${id}`}>
+          : <Link href={`/item?id=${id}`}>
               <a>{title}</a>
             </Link>
       }
@@ -26,11 +26,11 @@ export default ({ id, title, date, url, user, score, commentsCount }) => {
       {' '}
       by
       {' '}
-      <Link prefetch href={`/user?id=${user}`}>
+      <Link href={`/user?id=${user}`}>
         <a>{user}</a>
       </Link>
       {' '}
-      <Link prefetch href={`/item?id=${id}`}>
+      <Link href={`/item?id=${id}`}>
         <a>
           {timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */ } ago
         </a>
@@ -38,7 +38,7 @@ export default ({ id, title, date, url, user, score, commentsCount }) => {
       {' '}
       |
       {' '}
-      <Link prefetch href={`/item?id=${id}`}>
+      <Link href={`/item?id=${id}`}>
         <a>
           {commentsCount}
           {' '}

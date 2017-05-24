@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default () => (
   <header>
     <div className="left">
-     <Link prefetch href="/">
+     <Link href="/">
        <a>
          <span className="logo">
            <Logo />
@@ -18,7 +18,7 @@ export default () => (
       </div>
     </div>
     <div className="right">
-      <Link prefetch href="/login"><a className="login">login</a></Link>
+      <Link href="/login"><a className="login">login</a></Link>
     </div>
 
     <style jsx>{`

@@ -18,7 +18,7 @@ export default ({ stories, page=1, offset=null }) => (
       ))
     }
     <footer className="footer">
-      <Link prefetch href={`/news?p=${page + 1}`}>
+      <Link href={`/news?p=${page + 1}`}>
         <a>More</a>
       </Link>
     </footer>
